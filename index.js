@@ -32,10 +32,13 @@ $("#start").on("click", function() {
       // loop available units
       for(var u in units) {
         if(line[j].indexOf(u) >= 0) {
+          console.log(line[j]);
           unitpos = j;
           break;
         }
       }
+      
+      if(unitpos > -1) break;
     }
     
     console.log(unitpos);
