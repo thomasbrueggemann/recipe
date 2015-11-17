@@ -11,5 +11,8 @@ console.log(quantity(s));
 $("#start").on("click", function() {
   var input = $("#in").val();
   
-  console.log(input.split("\n"));
+  var lines = input.split("\n");
+  for(var line in lines) {
+    console.log(line);
+  }
 });
