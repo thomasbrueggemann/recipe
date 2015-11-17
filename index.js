@@ -11,8 +11,12 @@ console.log(quantity(s));
 $("#start").on("click", function() {
   var input = $("#in").val();
   
+  // loop all lines of recipe
   var lines = input.split("\n");
-  for(var line in lines) {
+  for(var i in lines) {
+    
+    // split line into components
+    var line = lines[i].split(" ");
     console.log(line);
   }
 });
