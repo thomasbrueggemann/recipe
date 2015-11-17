@@ -11,6 +11,7 @@ function quantity(s) {
 }
 
 console.log(quantity(s));
+var units = ["teaspoon", "tablespoon", "cup"];
 
 // START CONVERSION
 $("#start").on("click", function() {
@@ -22,6 +23,11 @@ $("#start").on("click", function() {
     
     // split line into components
     var line = lines[i].split(" ");
-    console.log(line);
+    
+    // try to find unit in line
+    for(var j in line) {
+      
+      
+    }
   }
 });
