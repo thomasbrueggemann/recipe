@@ -50,5 +50,5 @@ $("#start").on("click", function() {
     }
   }
   
-  console.log(data);
+  console.table(data);
 });
