@@ -1,0 +1,12 @@
+{
+	"name": "Recipe",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "browserify dev.js -o index.js"
+	},
+	"dependencies": {
+		"convert-units": "0.4.0",
+		"jquery": "2.1.4"
+	},
+	"license": "MIT"
+}
