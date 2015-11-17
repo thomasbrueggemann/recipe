@@ -76,8 +76,10 @@ $("#start").on("click", function() {
 	var output = "<h2 style='margin-top:15px'>Results:</h2>";
 	for (var t in data) {
 
-		output += (1 / minval) * convert(data[t].quantity).from(data[t].unit).to(mindata.unit);
-		output += " parts ";
+		var v = (1 / minval) * convert(data[t].quantity).from(data[t].unit).to(mindata.unit);
+		output += v;
+		if (v === 1) output += " part of ";
+		else output += " parts of ";
 		output += data[t].ingredient;
 		output += "<br />";
 	}
