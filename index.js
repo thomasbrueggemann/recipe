@@ -25,6 +25,7 @@ $("#start").on("click", function() {
     var line = lines[i].split(" ");
     
     var unitpos = -1;
+    console.log(lines[i]);
     
     // try to find unit in line
     for(var j in line) {
