@@ -76,7 +76,7 @@ $("#start").on("click", function() {
 	for (var t in data) {
 
 		output += (1 / minval) * convert(data[t].quantity).from(data[t].unit).to(mindata.unit);
-		output += " " + data[t].unit + " ";
+		output += " parts ";
 		output += data[t].ingredient;
 		output += "<br />";
 	}

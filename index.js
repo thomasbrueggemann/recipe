@@ -73,11 +73,11 @@ $("#start").on("click", function() {
 		}
 	}
 
-	var output = "<h2>Results:</h2>";
+	var output = "<h2 style='margin-top:15px'>Results:</h2>";
 	for (var t in data) {
 
 		output += (1 / minval) * convert(data[t].quantity).from(data[t].unit).to(mindata.unit);
-		output += " " + data[t].unit + " ";
+		output += " parts ";
 		output += data[t].ingredient;
 		output += "<br />";
 	}
