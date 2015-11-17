@@ -43,9 +43,9 @@ $("#start").on("click", function() {
     // unit found so add to data array
     if(unitpos > -1) {
       data.push({
-        "quantity": quantity(line[unitpos-1]),
+        "quantity": quantity(line[unitpos - 1]),
         "unit": line[unitpos],
-        "ingredient": line.slice(unitpos).join(" ")
+        "ingredient": line.slice(unitpos + 1).join(" ")
       });
     }
   }
