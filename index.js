@@ -24,10 +24,20 @@ $("#start").on("click", function() {
     // split line into components
     var line = lines[i].split(" ");
     
+    var unitpos = -1;
+    
     // try to find unit in line
     for(var j in line) {
       
-      
+      // loop available units
+      for(var u in units) {
+        if(line[j].indexOf(u) >= 0) {
+          unitpos = j;
+          break;
+        }
+      }
     }
+    
+    console.log(unitpos);
   }
 });
