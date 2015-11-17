@@ -10,8 +10,8 @@ function quantity(s) {
   return parseFloat(parts[0]) * (1.0 / parseFloat(parts[1]));
 }
 
-console.log(quantity(s));
 var units = ["teaspoon", "tablespoon", "cup"];
+var data = [];
 
 // START CONVERSION
 $("#start").on("click", function() {
@@ -25,7 +25,6 @@ $("#start").on("click", function() {
     var line = lines[i].split(" ");
     
     var unitpos = -1;
-    console.log(lines[i]);
     
     // try to find unit in line
     for(var j in line) {
@@ -33,7 +32,6 @@ $("#start").on("click", function() {
       // loop available units
       for(var u in units) {
         if(line[j].indexOf(units[u]) >= 0) {
-          console.log(line[j]);
           unitpos = j;
           break;
         }
@@ -42,6 +40,15 @@ $("#start").on("click", function() {
       if(unitpos > -1) break;
     }
     
-    console.log(unitpos);
+    // unit found so add to data array
+    if(unitpos > -1) {
+      data.push({
+        "quantity": quantity(line[unitpos-1]),
+        "unit": line[unitpos],
+        "ingredient": line.slice(unitpos).join(" ")
+      });
+    }
   }
+  
+  console.log(data);
 });
