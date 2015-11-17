@@ -6,3 +6,10 @@ function quantity(s) {
 }
 
 console.log(quantity(s));
+
+// START CONVERSION
+$("#start").on("click", function() {
+  var input = $("#in").val();
+  
+  console.log(input.split("\n"));
+});
